@@ -1,0 +1,16 @@
+Kök → Sol Alt Ağaç → Sağ Alt Ağaç
+
+
+PreOrder(root):
+    visit(root)
+    PreOrder(root.left)
+    PreOrder(root.right)
+
+
+Pre-Order Sonucu = 1 2 4 5 3 6 7
+Tree’de Neden Pre-order Kullanıyoruz?
+Pre-order dolaşımı, ağaç yapısında önce kök düğümün işlenmesini sağlar. Bu sayede ağacın yapısı
+korunarak işlem yapılabilir. Özellikle ağacı kopyalama, ağacı dosyaya yazma, ifade ağaçlarında
+(expression tree) operatörün önce işlenmesi gereken durumlarda pre-order traversal tercih edilir.
+Derleyicilerde ve sözdizim ağaçlarında, işlemin hangi operatörle başladığını görmek için pre-order
+dolaşımı oldukça kullanışlıdır.
