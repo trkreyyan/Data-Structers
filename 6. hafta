@@ -1,0 +1,32 @@
+Örnek 1: a = b + c * 2
+        =
+       / \
+      a   +
+         / \
+        b   *
+           / \
+          c   2
+
+Örnek 2: a * b + c
+        +
+       / \
+      *   c
+     / \
+    a   b
+
+Örnek 3: (a + b) * c
+        *
+       / \
+      +   c
+     / \
+    a   b
+
+Örnek 4 : a + b * c
+        +
+       / \
+      a   *
+         / \
+        b   c
+
+Abstract Syntax Tree (AST), bir ifadenin operatör önceliklerini ve yapısal ilişkilerini ağaç biçiminde gösterir.
+Düğümler operatörleri, yapraklar ise operandları temsil eder. Bu yapı sayesinde derleyiciler ifadeleri doğru sırayla analiz edebilir ve çalıştırabilir.
