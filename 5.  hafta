@@ -1,0 +1,30 @@
+Operatör Önceliği:
+* , / > + , -
+1)   a * b + c
+
+İfade soldan sağa doğru okunur.
+Önce a okunur. Bu bir operand olduğu için doğrudan postfix çıktıya eklenir.
+Daha sonra * operatörü okunur. Yığın boş olduğu için * yığına eklenir.
+Ardından b okunur ve bu da operand olduğu için çıktıya eklenir.
+Sonra + operatörü okunur. Yığında bulunan * operatörü, + operatöründen daha yüksek önceliğe sahip olduğu için önce çıktıya eklenir. Daha sonra + operatörü yığına eklenir.
+Son olarak c okunur ve çıktıya eklenir. İfade bittiğinde yığında kalan + operatörü de çıktıya eklenir.
+Postfix ifade: ab*c+
+
+2)    (a + b) * c
+
+İfade soldan sağa doğru okunur.
+İlk olarak ( karakteri okunur ve yığına eklenir.
+a operand olduğu için çıktıya eklenir.
++ operatörü yığına eklenir.
+b operand olduğu için çıktıya eklenir.
+) karakteri okunduğunda, açık parantez görülene kadar yığından operatörler çıktıya aktarılır. Bu durumda + çıktıya eklenir ve parantez yığından çıkarılır.
+Daha sonra * operatörü okunur ve yığına eklenir.
+c operand olduğu için çıktıya eklenir.
+İfade sona erdiğinde yığında kalan * operatörü de çıktıya eklenir.
+Postfix ifade: ab+c*
+
+3)   a + b * c
+
+Bu ifadede parantez olmasa bile operatör önceliği dikkate alınır.
+Önce a çıktıya eklenir. Ardından + yığına eklenir. b çıktıya eklenir. * operatörü, + operatöründen daha yüksek öncelikli olduğu için doğrudan yığına eklenir. c çıktıya eklenir. İfade bittiğinde önce *, sonra + çıktıya eklenir.
+Postfix ifade:  abc*+
